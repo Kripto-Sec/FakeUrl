@@ -14,8 +14,8 @@ def check_dependencies
     
     if system('gem list os -i') == false
 
-        puts "You dont have os gem instaled"
-        print "do you whant install? (Y/n): "
+        puts "You dont have os gem instaled".red
+        print "do you whant install? (Y/n): ".red
         ques = gets.chomp
 
         if ques.upcase == "Y" or ques == ""
@@ -30,7 +30,7 @@ def check_dependencies
 
     if system('gem list colorize -i') == false
 
-        puts "You dont have colorize instaled"
+        puts "You dont have colorize instaled".red
         print "Do you whant install it ? (Y/n) : "
         ques2 = gets.chomp
 
@@ -45,25 +45,6 @@ def check_dependencies
       
     end
 end
-
-def banner2
-    puts "
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░█▀▀░█▀█░█▀▀░█░█░░░░░░░
-░░░░░░█▀▀░█▀█░▀▀█░▀█▀░░░░░░░
-░░░░░░▀▀▀░▀░▀░▀▀▀░░▀░░░░░░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-
-    Made By -> Kripto-Sec
-    github  -> https://github.com/Kripto-Sec
-
-How to use:
- Site name >> facebook
- domain >> .com   
-
-".white
-end
-
 
 
 def banner
