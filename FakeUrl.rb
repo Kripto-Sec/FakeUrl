@@ -54,7 +54,7 @@ def main()
     uni = Array["\u0430", "\u0435", "\u0456", "\u043E"]
 
     check_dependencies
-    clear
+    system(clear)
     banner
 
     print "[+] Site name ".blue+">> ".red
