@@ -1,36 +1,11 @@
-require 'os'
-require 'colorize'
 
-def clear
-
-    if OS.windows?
-        system('cls')
-    elsif OS.linux?
-        system('clear')
-    end
-end
 
 def check_dependencies
     
-    if system('gem list os -i') == false
-
-        puts "You dont have os gem instaled".red
-        print "do you whant install? (Y/n): ".red
-        ques = gets.chomp
-
-        if ques.upcase == "Y" or ques == ""
-            system('gem install os')
-
-        elsif ques.upcase == "N"
-            puts "Ah ok bye..."
-            exit
-    
-        end
-    end
-
+   
     if system('gem list colorize -i') == false
 
-        puts "You dont have colorize instaled".red
+        puts "You dont have colorize instaled"
         print "Do you whant install it ? (Y/n) : "
         ques2 = gets.chomp
 
@@ -48,6 +23,9 @@ end
 
 
 def banner
+    
+    require 'colorize'
+
 
    
     
@@ -71,6 +49,8 @@ end
 
 def main()
     
+    require 'colorize'
+
     uni = Array["\u0430", "\u0435", "\u0456", "\u043E"]
 
     check_dependencies
@@ -120,5 +100,5 @@ def main()
 
 end
 
-clear
+check_dependencies
 main
